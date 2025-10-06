@@ -1,0 +1,104 @@
+
+h1,h2,h3,p{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;  /* Quicksand för all vanlig text */
+}
+
+/* Header med stor rubrik som täcker hela bredden */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 36px;        /* Stor huvudrubrik som i bilden */
+  font-family: 'David Libre', serif;
+  font-weight: 700;
+  margin: 0px;
+  line-height: 1.1;       /* Tät radavstånd för stora rubriker */
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;  /* Tillbaka till bra proportioner */
+  gap: 20px;             /* Bra mellanrum */
+  max-width: 1200px;     /* Större total bredd som referensen */
+  margin: 0 auto;        /* Centrera layouten */
+}
+
+/* H2 rubriken (första elementet i main) ska täcka kolumn 1-2. den börjar i col 1 och stannar inna col 3*/
+main section:first-of-type {
+  grid-column: 1 / 3;
+  font-size: 14px;        /* Mindre H2 som i referensbilden */
+  padding-bottom: 15px;   /* Mindre padding */
+  font-family: 'David Libre', serif;
+}
+
+/* Höger bildsektion ska vara i kolumn 3 och täcka båda raderna */
+.rightSection {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  padding-top: 0;         /* Ingen padding ovanför */
+}
+
+/* Bildstorlek - istället för class på img-taggen */
+.rightSection img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 0;          /* Ingen marginal ovanför bilden */
+}
+
+.leftSection{
+ padding-right: 15px;    
+}
+
+.middleSection{
+  padding-right: 15px;  
+  padding-left: 15px;    /* Padding på båda sidor för mitten-kolumn */
+}
+
+
+.bildText{  /* texten hamnar precis under bild */
+  margin-top: 0px;
+}
+
+.sidansRubrik{        /* Huvudrubrik */  
+ text-align: center;
+ font-size: 32px;        /* Mycket större som i bilden */
+ font-family: 'David Libre', serif;
+ font-weight: 700;
+ margin-bottom: 20px;
+ width: 100%;            /* Täcker hela bredden */
+ display: block;         /* Säkerställer full bredd */
+}
+
+p{
+  font-size: 14px;        /* Större text, mer läsbar */
+  line-height: 1.3;       /* Lite luftigare radavstånd */
+  margin-bottom: 8px;     /* Lite mer mellanrum mellan stycken */
+  text-align: justify;    /* Justerad text från vänster till höger. rak linje*/
+}
+
+.paragrafAnfang{   /* trycker ihop denna paragraf mer än övriga */
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+/* Första bokstaven blir stor - drop cap */
+.paragrafAnfang::first-letter {
+  font-size: 3em;      /* Mindre drop cap, mer proportionell */
+  line-height: 0.8;      /* Tätare line-height */
+  float: left;           /* Låter texten flyta runt */
+  margin-right: 2px;     /* Mindre mellanrum */
+  margin-top: 3px;       /* Justerar vertikal position */
+  font-family: 'Quicksand', serif;  /* Serif för drop cap */
+  font-weight: bold;  /**/
+}
