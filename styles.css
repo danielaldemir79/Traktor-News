@@ -27,7 +27,7 @@ header h1 {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 300px;  /* Tillbaka till bra proportioner */
+  grid-template-columns: 1fr 1fr 300px;  /* delas upp i 3 grid*/
   gap: 20px;             /* Bra mellanrum */
   max-width: 1200px;     /* Större total bredd som referensen */
   margin: 0 auto;        /* Centrera layouten */
