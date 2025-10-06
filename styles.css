@@ -29,8 +29,8 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 300px;  /* delas upp i 3 grid*/
   gap: 20px;             /* Bra mellanrum */
-  max-width: 1200px;     /* Större total bredd som referensen */
-  margin: 0 auto;        /* Centrera layouten */
+  max-width: 1200px;     /* max bredd */
+  margin: 0 auto;        /* Centrera layouten vid max */
 }
 
 /* H2 rubriken (första elementet i main) ska täcka kolumn 1-2. den börjar i col 1 och stannar inna col 3*/
@@ -94,7 +94,7 @@ p{
 
 /* Första bokstaven blir stor - drop cap */
 .paragrafAnfang::first-letter {
-  font-size: 3em;      /* Mindre drop cap, mer proportionell */
+  font-size: 3em;      /*storlek relaterad till övriga bokstäver*/
   line-height: 0.8;      /* Tätare line-height */
   float: left;           /* Låter texten flyta runt */
   margin-right: 2px;     /* Mindre mellanrum */
